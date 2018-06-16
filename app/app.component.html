@@ -1,0 +1,23 @@
+<div id="slika">
+<img src="https://www.codester.com/static/uploads/items/630/icon.png" alt="greska prilikom ucitavanja slike" height="135" width="135" />
+</div>
+<div id="ceo">
+    <h1>{{ igra.vratiRec() }}</h1>
+    <button *ngFor="let slovo of alfabet" style="height: 35px; width: 35px" (click)="pogadjanje(slovo)">{{ slovo }}</button>
+    <div style="height:20px"></div>
+    <div>
+        <span>POGRESNI POKUSAJI: </span>
+        <span *ngFor="let slovo of vratiPogresne()">
+            {{ slovo }}
+        </span>
+    </div>
+    <div style="height:20px"></div>
+    <div>
+        <span>BROJ POGRESNIH POKUSAJA: {{ igra.vratiBrPokusaja() }}</span>
+    </div>
+    <div style="height:20px"></div>
+    <div>
+        <button style="height:35px; width:100px" (click)="restartujIgru()">RESTARTUJ</button>
+    </div>
+    <div style="height:20px"></div>
+</div>
